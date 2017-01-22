@@ -2,10 +2,11 @@ class MilksController < ApplicationController
   def create
     @milk = Milk.new(milk_params)
 
-    if @milk.save
-      redirect_to root_path
-    else
-      redirect_to root_path
+    @milk.save!
+
+    respond_to do |format|
+      format.html { redirect_to root_path }
+      format.js # render milks/create.js.erb
     end
   end
 
