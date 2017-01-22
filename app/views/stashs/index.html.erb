@@ -1,6 +1,32 @@
-<h1>Hello rails</h1>
-
 <p>
-  new thing
+  <%= link_to "Show Milk", "#", id: "milks-link" %>
 </p>
-<%= render @milks %>
+
+<section id="milks-section">
+  <ol id="milk">
+    <%= render @milks %>
+  </ol>
+
+  <%= form_for @milk do |f| %>
+    <fieldset>
+      <ol>
+        <li>
+            <%= f.text_area :milk_type, placeholder: "Milk" %>
+        </li>
+        <li>
+            <%= f.text_area :location, placeholder: "Where" %>
+        </li>
+        <li>
+            <%= f.date_field :date %>
+        </li>
+        <li>
+            <%= f.number_field :amount, placeholder: "How much?" %>
+        </li>
+        <li>
+            <%= f.submit 'Add', class: 'button' %>
+        </li>
+      </ol>
+
+    </fieldset>
+  <% end %>
+</section>
