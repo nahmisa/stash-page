@@ -2,7 +2,7 @@ class MilksController < ApplicationController
   def create
     @milk = Milk.new(milk_params)
     @milk.location = "home"
-    @milk.exp_date = Date.now()
+    @milk.exp_date = Time.now()
 
     @milk.save!
 
