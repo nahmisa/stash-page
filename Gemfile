@@ -55,6 +55,7 @@ group :development do
   gem 'sqlite3'
 end
 
+
 group :production do
   # Use mysql as the database for Active Record - production
   gem 'mysql2'

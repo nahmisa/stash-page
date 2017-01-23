@@ -19,13 +19,17 @@ development:
 test:
   <<: *default
   database: db/test.sqlite3
+#
+# production:
+#   <<: *default
+#   database: db/test.sqlite3
 
 production:
   <<: *default
   adapter: mysql2
-  encoding: unicode
+  encoding: utf-8
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASS'] %>
-  host: <%= ENV['RDS_HOST'] %>
-  port: <%= ENV['RDS_PORT'] %>
+  host: <%= ENV['DB_HOST'] %>
+  port: <%= ENV['DB_PORT'] %>
