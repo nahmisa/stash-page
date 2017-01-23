@@ -1,6 +1,8 @@
 class MilksController < ApplicationController
   def create
     @milk = Milk.new(milk_params)
+    @milk.location = "home"
+    @milk.exp_date = Date.now()
 
     @milk.save!
 
@@ -13,6 +15,6 @@ class MilksController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def milk_params
-    params.require(:milk).permit(:milk_type, :amount, :location, :date)
+    params.require(:milk).permit(:milk_type, :amount, :date)
   end
 end
