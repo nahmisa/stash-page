@@ -1,21 +1,36 @@
 <div class="jumbotron">
-      <%= image_tag "smaller-baby-face.png", class: "sml-baby-face pull-right img-responsive" %>
+      <%= image_tag "smaller-baby-face.png", class: "baby-face pull-right img-responsive" %>
   <section id="stash-info">
 
-    <h1 class="stash-info">
+    <h1>
       For busy breastfeeding moms...
     </h1>
-    <h1 class="milk-info">
+    <p>
+      ...who need to ensure reliable milk production and don't have mind space to keep track of production, consumption, inventory and expiration dates constantly.  We take the tediousness out of recording your supply with a bot that runs on apps you're already using.
+    </p>
+    <%= link_to "Learn More", "#", class: "btn btn-success", id: "learn-more" %>
+
+    <div id="stash-more-info">
+        Extra info!
+
+      <%= link_to "Ok, got it!", "#", class: "btn btn-success", id: "close-learn" %>
+    </div>
+
+  </section>
+
+  <section id="milk-info">
+
+
+    <h1>
       My stash
     </h1>
-    <p class="stash-info">
-      ..who need to ensure reliable milk production and don't have mind space to keep track of production, consumption, inventory and expiration dates constantly.  We take the tediousness out of recording your supply through an app you're already using.
 
-      learn more link and download widget.
-    </p>
-    <p class="milk-info">
+
+    <p>
       This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
     </p>
+
+
   </section>
 
   <section id="milks-section">
