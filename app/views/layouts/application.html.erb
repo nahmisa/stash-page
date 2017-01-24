@@ -1,14 +1,99 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>StashPage</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>StashPage</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
-</html>
+<body>
+  <div class="container-fluid">
+    <header>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-pills top-nav">
+            <li class="logo">
+              <%= image_tag "smaller-baby-bottle.png", class: "pull-left img-responsive" %>
+              <%= link_to "/stash", "#", class: "logo-text" %>
+            </li>
+            <li class="pull-right">
+              <%= link_to "My Stash", "#", id: "milks-link" %>
+            </li>
+            <li class="pull-right">
+              <a href="#">Profile</a>
+            </li>
+          </ul>
+        </header>
+        <main>
+          <%= yield %>
+        </main>
+        <footer>
+          <div class="row">
+            <div class="col-md-3">
+              <ul class="nav nav-stacked nav-pills">
+                <li class="first-footer-link">
+                  <p>Making /stash</p>
+                </li>
+                <li>
+                  <a href="#">GitHub</a>
+                </li>
+                <li>
+                  <a href="#">Slack</a>
+                </li>
+                <li>
+                  <a href="#">Claudia.js</a>
+                </li>
+                <li>
+                  <a href="#">LUIS.ai</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="nav nav-stacked nav-pills">
+                <li class="second-footer-link">
+                  <p>Sarah</p>
+                </li>
+                <li>
+                  <a href="#">GitHub</a>
+                </li>
+                <li>
+                  <a href="#">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="nav nav-stacked nav-pills">
+                <li class="third-footer-link">
+                  <p class="title-top">Ada Developers Academy</p>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Twitter</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <ul class="nav nav-stacked nav-pills">
+                <li class="last-footer-link">
+                  <p class="title-top">Handy Links</p>
+                </li>
+                <li>
+                  <a href="#">NW Milkbank</a>
+                </li>
+                <li>
+                  <a href="#">Swedish Center for Perinatal Bonding & Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </body>
+    </html>
