@@ -3,7 +3,8 @@
     <%= milk.milk_type %>
   </td>
   <td>
-    <%= milk.exp_date %>
+    <%= milk.exp_date.strftime("%A, %B %e, %Y")   #=> "Thursday, June 9, 2011"
+ %>
   </td>
   <td>
     <%= milk.amount %>
