@@ -5,14 +5,15 @@
 // Override bootstrap defaults to make color-scheme more 'slack-y'
 * {
   font-family: 'Lato', sans-serif;
+  color: rgb(68,54,66);
 }
 .container-fluid {
   padding: 0;
   background-color: #eeeeee;
-  min-height: 50rem;
+  min-height: 70rem;
 }
 
-.jubotron {
+.jumbotron {
   min-height: 50rem;
 }
 
@@ -26,8 +27,8 @@ a {
 }
 
 a:hover, a:focus {
-    color: #000;
-    text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
 
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -66,16 +67,14 @@ a:hover, a:focus {
   box-shadow: inset 0 0 0 2px #000;
 }
 
-
-
 body {
   text-color: rgb(68,54,66)
 }
 
-.sml-baby-face {
+.baby-face {
   position: absolute;
-  bottom: 0;
-  right: 2rem;
+  bottom: 5rem;
+  right: 10rem;
 }
 
 .jumbotron > section {
@@ -88,11 +87,15 @@ body {
   margin-left: -5rem;
 }
 
-.stash-info {
+#stash-info {
   display: visible;
 }
 
-.milk-info {
+#stash-more-info, #close-learn {
+  display: none;
+}
+
+#milk-info {
   display: none;
 }
 
@@ -143,6 +146,10 @@ th {
 
 .last-footer-link > p {
   color: rgb(232,167,35);
+}
+
+footer a {
+  color: #9E9EA6;
 }
 // green 62,184,144
 
