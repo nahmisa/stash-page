@@ -99,6 +99,68 @@ body {
   display: none;
 }
 
+.middle-me {
+  margin: auto;
+  max-width: 5rem;
+}
+
+#close-learn {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+}
+
+.boxed {
+  margin-top: 5rem;
+  border: 1px solid #DEDEDE;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.14);
+  border-radius: 6px;
+  background-clip: padding-box;
+  max-width: 50%;
+}
+
+.how-to-stash {
+  font-weight: 700;
+  // font-size: 22px;
+  color: #2C2D30;
+  line-height: 27px;
+  display: block;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+.how-to {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+.how-to > li {
+    margin-bottom: 10px;
+    line-height: 24px;
+    text-indent: -40px;
+    margin-left: 40px;
+}
+
+.how-to > li:before {
+  font-family: 'FontAwesome';
+font-size: 20px;
+font-style: normal;
+font-weight: normal;
+color: #2ab27b;
+text-indent: -1px;
+content: '\f05d';
+vertical-align: bottom;
+padding-left: 0px;
+padding-bottom: 1px;
+height: 24px;
+display: inline-block;
+margin-right: 15px;
+font-size: 25px;
+}
+
+.secondary-text {
+  font-weight: 400;
+}
 // Form - center with green action button
 fieldset {
   margin-left: 5rem;
