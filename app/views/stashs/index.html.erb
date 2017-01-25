@@ -40,7 +40,7 @@
         <label for="milk_milk_type" class="control-label">
           Type
         </label>
-        <%= f.text_field :milk_type, class: "form-control", placeholder: "Milk" %>
+        <%= f.text_field :milk_type, class: "form-control", placeholder: "fresh, frozen or thawed" %>
       </div>
       <div class="form-group col-xs-3">
         <label for="milk_date" class="control-label">
@@ -55,7 +55,7 @@
         <label for="milk_amount" class="control-label">
           Amount
         </label>
-        <%= f.number_field :amount, class: "form-control", placeholder: "oz" %>
+        <%= f.number_field :amount, class: "form-control", placeholder: "number of ounces" %>
       </div>
       <div class="form-group col-xs-3">
         <%= f.submit 'Add', class: 'btn btn-success form-control add-btn' %>
