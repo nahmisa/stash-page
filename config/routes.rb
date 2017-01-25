@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root 'stashs#index'
 
-  resources :milks, only: [:create]
+  resources :milks, only: [:create, :update, :destroy]
 end

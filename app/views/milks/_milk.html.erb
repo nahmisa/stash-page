@@ -1,12 +1,21 @@
 <tr>
+  <%= form_for milk, remote: true do |f|  %>
   <td>
-    <%= milk.milk_type %>
+    <%= f.text_field :milk_type %>
   </td>
   <td>
     <%= milk.exp_date.strftime("%A, %B %e, %Y")   #=> "Thursday, June 9, 2011"
  %>
   </td>
   <td>
-    <%= milk.amount %>
+    <%= f.text_field :amount %>  </td>
+  <td>
+  <%= f.submit 'Update', class: 'btn btn-success form-control add-btn' %>
   </td>
+  <% end %>
+  <td>
+    <td><%= link_to 'Delete', milk_path(milk),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+</td>
 </tr>
