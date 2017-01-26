@@ -1,29 +1,25 @@
-// Place all the styles related to the Milks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// ##################
+//     SLACK COLOR SCHEME
+// ##################
 
-// Override bootstrap defaults to make color-scheme more 'slack-y'
 * {
   font-family: 'Lato', sans-serif;
   color: rgb(68,54,66);
 }
+
 .container-fluid {
   padding: 0;
   background-color: #eeeeee;
   min-height: 72.25rem;
 }
 
-.jumbotron {
-  min-height: 50rem;
-}
+.jumbotron { min-height: 50rem; }
 
-a {
-  color: rgba(68,54,66, 1);
-}
+a { color: rgba(68,54,66, 1); }
 
 .nav > li > a:hover, .nav > li > a:focus {
-    text-decoration: none;
-    background-color: rgba(238, 238, 238, 0);
+  text-decoration: none;
+  background-color: rgba(238, 238, 238, 0);
 }
 
 a:hover, a:focus {
@@ -36,7 +32,9 @@ a:hover, a:focus {
   background-color: rgba(238, 238, 238, 0);
 }
 
-// nav bar, top:
+// ##################
+//     TOP NAV BAR
+// ##################
 
 .top-nav {
   margin: 1rem;
@@ -48,9 +46,7 @@ a:hover, a:focus {
   padding: 7px 40px;
 }
 
-.logo {
-  width: 10rem;
-}
+.logo { width: 10rem; }
 
 .top-nav > li > .logo-text {
   font-size: 2rem;
@@ -58,28 +54,28 @@ a:hover, a:focus {
   margin-left: -4px;
 }
 
+#milks-link { box-shadow: inset 0 0 0 2px rgba(68,54,66, 1); }
 
-#milks-link {
-  box-shadow: inset 0 0 0 2px rgba(68,54,66, 1);
-}
+#milks-link:hover, #milks-link:active { box-shadow: inset 0 0 0 2px #000; }
 
-#milks-link:hover, #milks-link:active {
-  box-shadow: inset 0 0 0 2px #000;
-}
+// ##################
+//   BODY/BACKGROUND
+// ##################
 
-body {
-  text-color: rgb(68,54,66)
-}
+body { text-color: rgb(68,54,66); }
 
+.jumbotron > section { margin-right: 10rem; }
+
+// background yellow baby
 .baby-face {
   position: absolute;
   bottom: 5rem;
   right: 10rem;
 }
 
-.jumbotron > section {
-  margin-right: 10rem;
-}
+// ##################
+//   DYNAMIC CONTENT
+// ##################
 
 // Toggles view of milk & stash info
 #milks-section {
@@ -87,26 +83,26 @@ body {
   margin-left: -5rem;
 }
 
-#stash-info {
-  display: visible;
-}
+#stash-info { display: visible; }
 
-#stash-more-info, #close-learn {
-  display: none;
-}
+#stash-more-info, #close-learn { display: none; }
 
-#milk-info {
-  display: none;
-}
+#milk-info { display: none; }
 
-.btn-lg {
-  margin: 2rem;
-}
+// ##################
+//   TOGGLE BUTTONS
+// ##################
+
+.btn-lg { margin: 2rem; }
 
 .middle-me {
   margin: auto;
   max-width: 20rem;
 }
+
+// ##################
+//   STARTING CHECKLIST
+// ##################
 
 .boxed {
   padding: 3rem;
@@ -143,10 +139,6 @@ body {
     margin-left: 40px;
 }
 
-.how-to a {
-  color: #3aa3e3;
-}
-
 .how-to > li:before {
   font-family: 'FontAwesome';
   font-size: 20px;
@@ -168,18 +160,23 @@ body {
   margin-bottom: 2.5rem;
 }
 
+.how-to a { color: #3aa3e3; }
+
 .secondary-text {
   font-size: 1.75rem
 }
-// Form - center with green action button
-fieldset {
-  margin-left: 5rem;
-}
-.control-label {
-  padding-left: .5rem;
-}
 
-// Table
+// ##################
+//   INLINE FORM
+// ##################
+
+fieldset { margin-left: 5rem; }
+.control-label { padding-left: .5rem; }
+
+// ##################
+//   EDITABLE TABLE
+// ##################
+
 .milk-table-container {
   margin-left: 8rem;
   width: 70%;
@@ -199,7 +196,9 @@ table input {
   border: none;
 }
 
-// footer - 4 panels of links/categories
+// ##################
+//   FOOTER
+// ##################
 
 .first-footer-link > p, .second-footer-link > p,
 .third-footer-link > p, .last-footer-link > p {
@@ -207,32 +206,16 @@ table input {
   padding: 10px 15px;
 }
 
-.first-footer-link > p {
-  color: rgb(224,23,101);
-}
+.first-footer-link > p { color: rgb(224,23,101); }
 
-.second-footer-link > p {
-  color: rgb(112,202,219);
-}
+.second-footer-link > p { color: rgb(112,202,219); }
 
+.third-footer-link > p { color: rgb(62,184,144); }
 
-.third-footer-link > p {
-  color: rgb(62,184,144);
-}
+.last-footer-link > p { color: rgb(232,167,35); }
 
-.last-footer-link > p {
-  color: rgb(232,167,35);
-}
+footer a { color: #9E9EA6; }
 
-footer a {
-  color: #9E9EA6;
-}
-// green 62,184,144
-
-// blue 112,202,219
-
-// yellow 232,167,35
-
-// red 224,23,101
-
-//  text 68,54,66
+// ##################
+//   END
+// ##################
