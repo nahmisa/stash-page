@@ -7,7 +7,6 @@ class MilksController < ApplicationController
     @milk.exp_date = @milk.get_exp_date(@milk.milk_type, @milk.date)
 
     @milk.save!
-    # can refactor @milks since it appears in all methods for re-rendering the table
 
     @milks = Milk.where.not(milk_type: "consumed").order(exp_date: "asc")
 
@@ -27,6 +26,7 @@ class MilksController < ApplicationController
     @milk.exp_date = @milk.get_exp_date(@milk.milk_type, Time.now)
 
     @milk.save!
+
     @milks = Milk.where.not(milk_type: "consumed").order(exp_date: "asc")
 
     # will need to tackle error handling later

@@ -1,7 +1,6 @@
 <div class="jumbotron">
-      <%= image_tag "smaller-baby-face.png", class: "baby-face pull-right img-responsive" %>
+  <%= image_tag "smaller-baby-face.png", class: "baby-face pull-right img-responsive" %>
   <section id="stash-info">
-
     <h1>
       For busy breastfeeding moms...
     </h1>
@@ -9,63 +8,51 @@
       ...who need to ensure reliable milk production and don't have mind space to keep track of production, consumption, inventory and expiration dates constantly.  We take the tediousness out of recording your supply with a bot that runs on apps you're already using.
     </p>
     <div class="middle-me">
-
-    <%= link_to "Learn More", "#", class: "btn-lg btn-success", id: "learn-more" %>
+      <%= link_to "Learn More", "#", class: "btn-lg btn-success", id: "learn-more" %>
     </div>
-
-
     <div id="stash-more-info">
-
       <div class="boxed middle-me">
-      <h1 class="anchor" title="How to"><span class="how-to-stash">How-to /stash</span></h1>
-      <ul class="how-to">
-      <li>
-        <strong><a href="https://slack.com/downloads">Start using Slack</a></strong>
-        <span class="secondary-text"> to organize your team at work or at home</span>
-      </li>
-      <li>
-        <strong><a href="https://slack.com/apps">Download our app</a></strong>
-        <span class="secondary-text"> to start tracking.</span>
-      </li>
-      <li>
-        <strong><a href="#" id="milks-link2">Record your current milk inventory</a> </strong>
-        <span class="secondary-text">to get started.</span>
-      </li>
-      <li>
-        <strong><a href="https://api.slack.com/slash-commands">Use /stash in Slack</a></strong>
-        <span class="secondary-text"> to easily update your stash.</span>
-      </li>
-      <li>
-        <strong>Talk to the bot like you would a human </strong>
-        <span class="secondary-text"> - no complicated commands to memorize!</span>
-      </li>
-      <li>
-        <strong>Get your baby's other caretakers involved. </strong>
-        <span class="secondary-text"> From dads to daycares, your support network can also be involved in tracking your stash.</span>
-      </li>
-      </ul>
+        <h1 class="anchor" title="How to"><span class="how-to-stash">How-to /stash</span></h1>
+        <ul class="how-to">
+          <li>
+            <strong><a href="https://slack.com/downloads">Start using Slack</a></strong>
+            <span class="secondary-text"> to organize your team at work or at home</span>
+          </li>
+          <li>
+            <strong><a href="https://slack.com/apps">Download our app</a></strong>
+            <span class="secondary-text"> to start tracking.</span>
+          </li>
+          <li>
+            <strong><a href="#" id="milks-link2">Record your current milk inventory</a> </strong>
+            <span class="secondary-text">to get started.</span>
+          </li>
+          <li>
+            <strong><a href="https://api.slack.com/slash-commands">Use /stash in Slack</a></strong>
+            <span class="secondary-text"> to easily update your stash.</span>
+          </li>
+          <li>
+            <strong>Talk to the bot like you would a human </strong>
+            <span class="secondary-text"> - no complicated commands to memorize!</span>
+          </li>
+          <li>
+            <strong>Get your baby's other caretakers involved. </strong>
+            <span class="secondary-text"> From dads to daycares, your support network can also be involved in tracking your stash.</span>
+          </li>
+        </ul>
         <div class="middle-me">
-        <%= link_to "Ok, got it!", "#", class: "btn-lg btn-success", id: "close-learn" %>
+          <%= link_to "Ok, got it!", "#", class: "btn-lg btn-success", id: "close-learn" %>
         </div>
       </div>
-
-      </div>
-
+    </div>
   </section>
-
   <section id="milk-info">
-
-
     <h1>
       My stash
     </h1>
     <p>
       Onboard your inventory here, and then update easily through the /slack command.  Check back any time to view and edit your stash by clicking on the fields in the table below.  Expiration dates are re-computed whenever the type of milk changes.
     </p>
-
-
   </section>
-
   <section id="milks-section">
     <%= form_for @milk, html: { class: "form-inline" }, remote: true do |f| %>
     <fieldset>

@@ -5,19 +5,20 @@
   </td>
   <td>
     <%= milk.exp_date.strftime("%A, %B %e, %Y")   #=> "Thursday, June 9, 2011"
- %>
+    %>
   </td>
   <td>
-    <%= f.text_field :amount %>  </td>
-  <td>
-  <%= f.submit 'Update', class: 'btn btn-success form-control add-btn' %>
+    <%= f.text_field :amount %>
   </td>
-  <% end %>
   <td>
-    <td><%= link_to 'Delete', milk_path(milk),
-              class: "btn btn-danger",
-              method: :delete,
-              remote: true,
-              data: { confirm: 'Are you sure?' } %></td>
-</td>
+    <%= f.submit 'Update', class: 'btn btn-success form-control add-btn' %>
+  </td>
+    <% end %>
+  <td>
+    <%= link_to 'Delete', milk_path(milk),
+      class: "btn btn-danger",
+      method: :delete,
+      remote: true,
+      data: { confirm: 'Are you sure?' } %>
+  </td>
 </tr>
