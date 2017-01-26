@@ -15,7 +15,9 @@
   <% end %>
   <td>
     <td><%= link_to 'Delete', milk_path(milk),
+              class: "btn btn-danger",
               method: :delete,
+              remote: true,
               data: { confirm: 'Are you sure?' } %></td>
 </td>
 </tr>

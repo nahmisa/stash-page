@@ -7,6 +7,10 @@ class MilksController < ApplicationController
     @milk.exp_date = @milk.get_exp_date(@milk.milk_type, @milk.date)
 
     @milk.save!
+    # can refactor @milks since it appears in all methods for re-rendering the table
+
+    @milks = Milk.where.not(milk_type: "consumed").order(exp_date: "asc")
+
     # will need to tackle error handling later
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -15,12 +19,16 @@ class MilksController < ApplicationController
   end
 
   def update
-    @milk = Milk.update(milk_params)
+    @milk = Milk.find(params[:id])
+    @milk.update(milk_params)
     # matches /stash formatting of downcase
     @milk.milk_type.downcase!
-    @milk.exp_date = @milk.get_exp_date(@milk.milk_type, @milk.date)
+    # recompute the expiration date based on the date of change
+    @milk.exp_date = @milk.get_exp_date(@milk.milk_type, Time.now)
 
     @milk.save!
+    @milks = Milk.where.not(milk_type: "consumed").order(exp_date: "asc")
+
     # will need to tackle error handling later
     respond_to do |format|
       format.html { redirect_to root_path }
@@ -31,6 +39,9 @@ class MilksController < ApplicationController
 def destroy
   @milk = Milk.find(params[:id])
   @milk.destroy
+
+  @milks = Milk.where.not(milk_type: "consumed").order(exp_date: "asc")
+
 
   respond_to do |format|
     format.html { redirect_to root_path }

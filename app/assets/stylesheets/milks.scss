@@ -194,6 +194,11 @@ td {
   text-align: center;
 }
 
+table input {
+  background-color: transparent;
+  border: none;
+}
+
 // footer - 4 panels of links/categories
 
 .first-footer-link > p, .second-footer-link > p,
